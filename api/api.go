@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"strings"
 
-	cms "goprojects/cms3.4"
+	"github.com/gotoolkit/demo/api/cms"
 )
 
 var pool = New()

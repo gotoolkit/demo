@@ -1,6 +1,7 @@
 package backup_test
 
 import (
+	"fmt"
 	"testing"
 
 	"github.com/matryer/goblueprints/chapter8/backup"
@@ -9,9 +10,9 @@ import (
 
 func TestDirHash(t *testing.T) {
 
-	hash1a, err := backup.DirHash("test/hash1")
+	hash1a, err := backup.DirHash("./test/hash1")
 	require.NoError(t, err)
-	hash1b, err := backup.DirHash("test/hash1")
+	hash1b, err := backup.DirHash("./test/hash1")
 	require.NoError(t, err)
 
 	require.Equal(t, hash1a, hash1b, "hash1 and hash1b should be identical")
@@ -20,5 +21,6 @@ func TestDirHash(t *testing.T) {
 	require.NoError(t, err)
 
 	require.NotEqual(t, hash1a, hash2, "hash1 and hash2 should not be the same")
+	fmt.Println(hash1a, hash1b, hash2)
 
 }

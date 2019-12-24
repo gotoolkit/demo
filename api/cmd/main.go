@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"os"
 
-	"goprojects/api"
+	"github.com/gotoolkit/demo/api"
 )
 
 func main() {
